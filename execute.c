@@ -116,10 +116,10 @@ int execute(char *const command[], char **envp)
 		free(fullpath);
 	} else
 		printerror(command);
-	if (WIFEXITED(status))
+	/*if (WIFEXITED(status))
 	{
 		free(*command);
 		exit(2);
-	}
+	}*/
 	return (0);
 }
