@@ -1,6 +1,6 @@
 #include "simpleshell.h"
 
-/*char *fullpath = NULL;*/
+char *fullpath = NULL;
 
 /**
  * printerror - prints error
