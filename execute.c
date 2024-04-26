@@ -1,6 +1,6 @@
 #include "simpleshell.h"
 
-/*char *fullpath;*/
+/*char *fullpath = NULL;*/
 
 /**
  * printerror - prints error
@@ -116,7 +116,7 @@ int execute(char *const command[], char **envp)
 		free(fullpath);
 	} else
 		printerror(command);
-	if (errno == -1)
+	if (WIFEXITED(status))
 	{
 		free(*command);
 		exit(2);
